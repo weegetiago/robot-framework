@@ -10,5 +10,5 @@ https://python.org.br/
 - Driver para automação web:
 .Firefox: https://github.com/mozilla/geckodriver/releases 
 .Chrome: https://chromedriver.chromium.org/downloads 
-.Chrome: Sugestão, na chromestore, instalar truepath
-.obs: Recomendado instalar dentro da pasta scripts na instalação do python. 
+  .obs: Sugestão, na chromestore, instalar truepath
+  .obs: Recomendado instalar dentro da pasta scripts na instalação do python. 
