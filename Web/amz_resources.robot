@@ -49,4 +49,12 @@ E deve exibir a categoria "${CATEGORIA}"
     Wait Until Element Is Visible    locator=//span[@dir='auto'][contains(.,'${CATEGORIA}')]
 
 E clicar no botão "pesquisar" 
-    Click Button    locator=${BOTAO_PESQUISAR}     
+    Click Button    locator=${BOTAO_PESQUISAR} 
+
+# TEMPLATE 
+01 Caso de teste - Pesquisa de produto
+    [Arguments]    ${produto}    ${URL}
+    Dado que estou na pagina "${URL}" 
+    Quando digitar "${produto}" no campo de busca
+    E clicar no botão "pesquisar" 
+    Entao deve listar o produto "${produto}"
