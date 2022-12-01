@@ -6,7 +6,7 @@ Test Teardown    Fechar o navegador
 
 *** Test Cases *** 
 01 Caso de teste - Pesquisa de produto
-    [Documentation]    Esse teste faz validações na pesquisa da pagina. Testa mais de um cenário no mesmo caso de teste.    
+    [Documentation]    Valida as Pesquisas da pagina. Testa mais de um cenário no mesmo caso de teste.    
     [Tags]    busca_protudo lista_produtos 
     [Template]    01 Caso de teste - Pesquisa de produto
     #PRODUTO    #URL
