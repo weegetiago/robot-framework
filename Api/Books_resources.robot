@@ -14,6 +14,14 @@ ${BaseUrl}    https://fakerestapi.azurewebsites.net/api/v1/
 Conectar a minha API
      Create Session    fakeAPI    ${BaseUrl}    
 
+Alterar o titulo do livro "${ID_LIVRO}" para "${TITLE_LIVRO}"
+     ${HEADERS}    Create Dictionary    content-type=application/json 
+     ${RESPONSE}    PUT On Session    fakeAPI    Books/${ID_LIVRO}
+     ...                             data={"id": "${ID_LIVRO}","title": "${TITLE_LIVRO}","description": "Velejador","pageCount": 690,"excerpt": "Magna in elite dolore aliquam lorem clita blandit acusam dolore erat magna diam. Erat kasd stet.","publishDate": "2022-12-11T14:12:34.562Z"}
+     ...                             headers=${HEADERS}                                          
+     Log    ${RESPONSE.text}
+     Set Test Variable    ${RESPONSE}
+
 Cadastrar um novo livro
      ${HEADERS}    Create Dictionary    content-type=application/json 
      ${RESPONSE}    POST On Session    fakeAPI    Books
@@ -41,7 +49,7 @@ Confere o reason "${REASON_DESEJADO}"
 Confere se retorna uma lista com "${QTDE}" itens
     Length Should Be    ${RESPONSE.json()}    ${QTDE} 
 
- Confere se retornou o dados corretos do livro "15"
+Confere se retornou o dados corretos do livro "${ID_LIVRO}"
     Dictionary Should Contain Item     ${RESPONSE.json()}      id    ${BOOK_15.id}  
     Dictionary Should Contain Item     ${RESPONSE.json()}      title    ${BOOK_15.title}
     Dictionary Should Contain Item     ${RESPONSE.json()}      pageCount    ${BOOK_15.pageCount}  
