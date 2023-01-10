@@ -29,4 +29,6 @@ Suite Setup    Conectar a minha API
     Confere se retornou o dados corretos do livro "15"
 
 
-#TODO - Deletar um livro  
+05 - Delerar um livro 
+    Deleta o livro "5"
+    Confere status code "200"
