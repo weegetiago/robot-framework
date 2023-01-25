@@ -15,8 +15,7 @@
   - obs: Recomendado instalar dentro da pasta scripts na instalação do python. 
 
 # Úteis
-- Robot Framework Language Server da Robocorp no VSCode  
-- Instalar a extensão: Robot Framework Language Server da Robocorp no VSCode
+- Instalar a extensão: Robot Framework Intellisense no VSCode
 - Sugestão, na chromestore, instalar truepath
 - Fake API - https://fakerestapi.azurewebsites.net/index.html  
 - Comando para executar os testes: 
