@@ -17,7 +17,7 @@ Abrir o navegador
     Open Browser    browser=${BORWSER}
     Maximize Browser Window
 
-Fechar o navegador    
+Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
