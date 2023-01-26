@@ -3,7 +3,6 @@ Library    SeleniumLibrary
 Library    Telnet
 
 *** Variables ***
-${BORWSER}    chrome
 ${MENU_ELETRONICOS}    //*[@id="nav-xshop"]/a[8]
 ${LOGO_AMAZON}    nav-logo-sprites
 ${PAGE_ELETRONICOS}    //*[@id="nav-subnav"]/a[1]/span
@@ -12,15 +11,6 @@ ${INPUT_PESQUISA}    twotabsearchtextbox
 ${BOTAO_PESQUISAR}    nav-search-submit-button
 
 *** Keywords ***
-# STEPS
-Abrir o navegador
-    Open Browser    browser=${BORWSER}
-    Maximize Browser Window
-
-Fechar o navegador
-    Capture Page Screenshot
-    Close Browser
-
 # DADO
 Dado que estou na pagina "${URL}"     
     Go To    url=${URL}

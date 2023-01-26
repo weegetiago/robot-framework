@@ -1,11 +1,18 @@
 *** Settings ***
 Documentation    Essa suite testa a pagina da amazon 
-Resource    amz_resources.robot
+Resource    ../resources/resources.robot
 Test Setup    Abrir o navegador 
 Test Teardown    Fechar o navegador 
+Resource    ../resources/amz_resources.robot
 
 *** Test Cases *** 
-01 Caso de teste - Pesquisa de produto
+01 Caso de teste - Acesso ao menu "Eletronicos"
+    [Documentation]    Esse teste faz validações no menu Eletrônicos e Tecnologia.    
+    [Tags]    menus      
+    Dado que estou na pagina "https://www.amazon.com.br/"
+    Quando acessar o menu "Eletronicos" 
+
+02 Caso de teste - Pesquisa de produto
     [Documentation]    Valida as Pesquisas da pagina. Testa mais de um cenário no mesmo caso de teste.    
     [Tags]    busca_protudo lista_produtos 
     [Template]    01 Caso de teste - Pesquisa de produto
@@ -14,7 +21,7 @@ Test Teardown    Fechar o navegador
     Xbox        https://www.amazon.com.br/
     Ps5         https://www.amazon.com.br/   
 
-02 Caso de teste - Acesso ao menu "Eletronicos"
+03 Caso de teste - Valida a pesquisa do menu "Eletronicos"
     [Documentation]    Esse teste faz validações no menu Eletrônicos e Tecnologia.    
     [Tags]    menus      
     Dado que estou na pagina "https://www.amazon.com.br/"
